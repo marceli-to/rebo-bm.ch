@@ -1,0 +1,53 @@
+{{ partial:content/bard :content="content" }}
+
+<section class="px-6 max-w-6xl mx-auto mb-8 md:mb-18">
+
+  <article class="bg-white shadow-4xl py-3 pb-5 md:py-6 md:pb-8 px-4 md:px-8 rounded-tr-3xl rounded-bl-3xl md:rounded-tr-4xl md:rounded-bl-4xl">
+    <div>
+
+      {{ collection:references as="references" sort="year:desc" }}
+
+        {{ references group_by="year" }}
+
+          {{ groups }}
+
+              <h2>{{ group }}</h2>
+
+              <div class="sm:grid sm:gap-4 md:gap-6 sm:grid-cols-12 mb-2 md:mb-4 last-of-type:!mb-0">
+              
+                {{ items }}
+
+                  <div class="sm:col-span-6 md:col-span-4">
+
+                    <a href="{{ url }}" class="block no-underline hover:underline group mb-4">
+                      
+                      <figure class="mb-2 md:mb-3">
+                        <img src="{{ glide :src="preview_image:url" width="900" height="500" }}" class="w-full aspect-[16/9] object-cover group-hover:opacity-90" width="900" height="500" alt="{{ preview_image:alt }}" title="{{ preview_image:alt }}">
+                      </figure>
+
+                      <h3>{{ preview_title }}</h3>
+
+                      {{ if in_realisation }}
+                        IN REALISATION
+                      {{ else }}
+                        {{ year }}  
+                      {{ /if }}
+                    </a>
+                    
+                  </div>
+
+                {{ /items }}
+
+              </div>
+
+          {{ /groups }}
+
+        {{ /references }}
+
+      {{ /collection:references }}
+    
+    </div>
+
+  </article>
+
+</section>

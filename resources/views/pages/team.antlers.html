@@ -1,0 +1,20 @@
+{{ partial:content/bard :content="content" }}
+
+{{ partial:layout/article }}
+  
+  <div class="sm:grid sm:gap-6 sm:grid-cols-12 md:gap-8">
+
+    {{ collection:team as="team_member" sort="order" }}
+    
+      {{ team_member }}
+      
+        {{ partial:content/team-member :name="team_member_name" :function="team_member_function" :description="team_member_description" :image="team_member_image" }}
+      
+      {{ /team_member  }}
+
+    {{ /collection:team }}
+
+  </div>
+
+{{ /partial:layout/article }}
+{{ partial:content/references }}

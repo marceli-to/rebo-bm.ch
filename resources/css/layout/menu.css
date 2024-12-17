@@ -1,0 +1,3 @@
+nav.menu.is-visible {
+  @apply h-full w-full opacity-100 z-50 md:w-auto md:h-auto md:relative transition-opacity 
+}

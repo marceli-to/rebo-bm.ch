@@ -1,0 +1,22 @@
+<footer class="site-footer bg-black w-full">
+  {{ partial:layout/inner-block }}
+    <div class="py-6 md:py-9 sm:flex sm:justify-between text-white text-xs md:text-sm font-capitalized uppercase leading-normal">
+      <address class="mb-9 md:mb-0 not-italic sm:flex sm:justify-between">
+        <div class="mb-3 md:mb-0 sm:mr-12 md:mr-16">
+          {{ footer:address | nl2br }}
+        </div>
+        <div>
+          {{ footer:contact_info }}
+        </div>
+      </address>
+      <nav>
+        <ul>
+          {{ collection:pages navigation:is="meta" }}
+            {{ partial:menu/meta-item :text="title" :url="url" target="_self" }}
+          {{ /collection:pages }}
+          {{ partial:menu/meta-item text="Design by Stoz" url="https://stoz.ch" target="_blank" }}
+        </ul>
+      </nav>
+    </div>
+  {{ /partial:layout/inner-block }}
+</footer>

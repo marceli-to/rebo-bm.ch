@@ -1,0 +1,9 @@
+<nav class="menu fixed top-0 left-0 bg-white opacity-0 z-[-1] transition-none md:relative md:top-[5px] md:opacity-100 md:z-100 md:order-1 group" data-js="menu">
+  <div class="flex justify-center items-center md:items-end h-[inherit] md:h-auto">
+    <ul class="md:flex">
+      {{ nav:collection:pages navigation:is="main" sort="order" }}
+        {{ partial:menu/main-item :text="title" :url="url" target="_self" }}
+      {{ /nav:collection:pages }}
+    </ul>
+  </div>
+</nav>

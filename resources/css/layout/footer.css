@@ -1,0 +1,3 @@
+.site-footer a {
+  @apply text-white text-xs md:text-sm font-capitalized uppercase hover:text-primary
+}

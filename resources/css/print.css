@@ -1,0 +1,42 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "typo/webfonts";
+@import "typo/utilities";
+
+@media print {
+
+  html, body {
+    margin: 0;
+    width: 210mm;
+    height: 297mm;
+  }
+  
+  html.sr [data-reveal] {
+    visibility: visible !important;
+  }
+
+  header {
+    box-shadow: none !important;
+  }
+
+  header a[data-js],
+  nav {
+    display: none !important;
+  }
+
+  figure,
+  .hero img {
+    box-shadow: none !important;
+  } 
+
+
+  div[class*="grid-cols-12"] {
+    background-color: red;
+    @apply !grid !grid-cols-12 !gap-8
+  }
+
+  [class="sm:col-span-4"] {
+    @apply !col-span-4
+  }
+}

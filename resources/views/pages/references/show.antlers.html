@@ -1,0 +1,121 @@
+
+
+{{# Reference hero image #}}
+{{ partial:images/hero :image="hero" :caption="hero:alt" }}
+
+{{# Reference data #}}
+{{ partial:layout/article class="reference md:!mb-18 relative" }}
+  <h1 class="!text-xl md:!text-2xl lg:!text-3xl !mb-1 md:!mb-2 max-w-[calc(100%-70px)] sm:max-w-[calc(100%-75px)] md:max-w-[calc(100%-80px)]">{{ title }}</h1>
+  <p class="font-capitalized uppercase">{{ subtitle }}</p>
+  <div class="mt-6 md:mt-8 sm:grid sm:grid-cols-12 sm:gap-6 md:gap-8">
+    <div class="sm:col-span-4">
+      {{ if object }}
+        <h3 class="font-capitalized uppercase">Objekt</h3>
+        <p>{{ object }}</p>
+      {{ /if }}
+      {{ if client }}
+        <h3 class="font-capitalized uppercase">Bauherr</h3>
+        <p>{{ client }}</p>
+      {{ /if }}
+      {{ if ref }}
+        <h3 class="font-capitalized uppercase">Referenz</h3>
+        <p>{{ ref | nl2br }}</p>
+      {{ /if }}
+      {{ if volume }}
+        <h3 class="font-capitalized uppercase">Bauvolumen</h3>
+        <p>{{ volume | nl2br }}</p>
+      {{ /if }}
+    </div>
+    <div class="sm:col-span-4">
+      {{ if cost }}
+        <h3 class="font-capitalized uppercase">Baukosten</h3>
+        <p>{{ cost }}</p>
+      {{ /if }}
+      {{ if periode }}
+        <h3 class="font-capitalized uppercase">Bauzeit</h3>
+        <p>{{ periode }}</p>
+      {{ /if }}
+      {{ if job }}
+        <h3 class="font-capitalized uppercase">Auftrag</h3>
+        <p class="leading-6">{{ job | nl2br }}</p>
+      {{ /if }}
+    </div>
+    <div class="sm:col-span-4">
+      <h3 class="font-capitalized uppercase">Download</h3>
+      <p>
+        <a href="/export/pdf/{{ id }}" title="Download Datenblatt" target="_blank">
+          {{ partial:icons/pdf }}
+        </a>
+      </p>
+    </div>
+  </div>
+
+  {{# Reference browser #}}
+  <nav class="flex justify-end items-center absolute top-1 lg:top-3 mt-.5 right-0">
+    <div>
+      {{ collection:previous in="references" as="reference" limit="1" sort="order" }}
+        {{ reference }}
+          <a href="{{ url }}" title="{{ title }}">
+            {{ partial:icons/chevron-left }}
+          </a>
+        {{ /reference }}
+      {{ /collection:previous }}
+    </div>
+
+    <div class="mx-2 md:mx-3">
+      <a href="/referenzen" title="Referenzen">
+        {{ partial:icons/cross-black }}
+      </a>
+    </div>
+
+    <div>
+      {{# Reference browser - next #}}
+      {{ collection:next in="references" as="reference" limit="1" sort="order" }}
+      
+        {{ reference }}
+          <a href="{{ url }}" title="{{ title }}">
+            {{ partial:icons/chevron-right }}
+          </a>
+        {{ /reference }}
+      
+      {{ /collection:next }}
+      {{# /Reference browser - next #}}
+    </div>
+
+  </nav>
+  {{# /Reference browser #}}
+
+  
+  {{# Reference galleries #}}
+  {{ if gallery }}
+    <div class="mt-2 md:mt-4">
+
+      {{ gallery }}
+        
+          {{ if images | count == 2 }}
+            <div class="mb-6 md:mb-8 sm:grid sm:grid-cols-2 sm:gap-6 md:gap-8">
+              {{ images }}
+                <figure class="mb-6 sm:mb-0 shadow-4xl">
+                  <img src="{{ glide :src="url" width="1600" height="1000" }}" class="w-full aspect-[16/10] object-cover" width="1600" height="900" alt="{{ caption }}">
+                </figure>
+              {{ /images }}
+            </div>
+          {{ /if }}
+
+          {{ if images | count == 3 }}
+            <div class="mb-6 md:mb-8 sm:grid sm:grid-cols-3 sm:gap-6 md:gap-8">
+              {{ images }}
+                <figure class="mb-6 sm:mb-0 shadow-4xl">
+                  <img src="{{ glide :src="url" width="900" height="1200" }}" class="w-full aspect-[3/4] object-cover" width="900" height="1200" alt="{{ caption }}">
+                </figure>
+              {{ /images }}
+            </div>
+          {{ /if }}
+
+      {{ /gallery }}
+    </div>
+  {{ /if }}
+  {{# /Reference galleries #}}
+
+{{ /partial:layout/article }}
+{{# /Reference data #}}

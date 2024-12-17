@@ -1,0 +1,14 @@
+<header class="bg-white shadow-md sm:shadow-none fixed md:relative top-0 left-0 w-full h-20 md:h-24 z-20">
+  {{ partial:layout/inner-block }}
+    <div class="h-20 md:h-24 py-6 flex items-center md:items-end md:justify-between relative">
+      <a href="/" class="md:order-2">
+        {{ partial:icons/logo }}
+      </a>
+      <a href="javascript:;" class="flex justify-end items-center absolute top-6 right-0 w-[24px] h-[20px] z-100 group md:hidden" data-js="btn-menu">
+        {{ partial:icons/burger }}
+        {{ partial:icons/cross }}
+      </a>
+      {{ partial:menu/main }}
+    </div>
+  {{ /partial:layout/inner-block }}
+</header>

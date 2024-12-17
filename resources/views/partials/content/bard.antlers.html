@@ -1,0 +1,29 @@
+{{ content }}
+
+  {{ if type == "hero" }}
+    {{ partial:images/hero :image="image" :caption="image:alt" }}
+  {{ /if }}
+
+  {{ if type == "gallery" }} 
+    {{ partial:images/gallery :images="images" }}
+  {{ /if }}
+
+  {{ if type == "text" }}
+    {{ partial:layout/article }}
+      {{ text }}
+    {{ /partial:layout/article }}
+  {{ /if }}
+
+  {{ if type == "text_media" }}
+    {{ partial:content/text-media :text="textmedia_text" :image="textmedia_image" }}
+  {{ /if }}
+
+  {{ if type == "services" }}
+    {{ partial:content/services :column_left="column_left" :column_right="column_right" }}
+  {{ /if }}
+
+  {{ if type == "map" }}
+    {{ partial:content/map :latitude="latitude" :longitude="longitude" }}
+  {{ /if }}
+
+{{ /content }}

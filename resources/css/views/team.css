@@ -1,0 +1,3 @@
+.team-member a {
+  @apply text-black no-underline hover:underline-offset-4 hover:decoration-1 hover:underline
+}

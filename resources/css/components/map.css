@@ -1,0 +1,8 @@
+.map .marker {
+  background-image: url('/img/marker.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  height: 50px;
+  width: 40px;
+}

@@ -1,0 +1,42 @@
+{
+    "ocrbregular": {
+        "normal": "ocrbregular-normal_52b74ff25e66b8272cd810f48714ec8a"
+    },
+    "calibriregular": {
+        "normal": "calibriregular_normal_d0c601ed89fe6fb1ddc7b680a26306f5"
+    },
+    "calibribold": {
+        "normal": "calibribold_normal_0ee0a87666611571ab0d1fa1298a0f5e",
+        "bold": "calibribold_bold_edd4e62e65ad1d10f9a6a1dd0521a923"
+    },
+    "effraregular": {
+        "normal": "effraregular_normal_70b9da2dcc7f4d7ada5836f9559b9d64"
+    },
+    "effrabold": {
+        "bold": "effrabold_bold_f077803178fd74236d4536c99aae9f54"
+    },
+    "dinlight": {
+        "normal": "dinlight_normal_7381862edaa97ffa7d322aecf4487cd4"
+    },
+    "dinmedium": {
+        "normal": "dinmedium_normal_be49839edbb5cb53277cb3121d599bfd"
+    },
+    "dinregular": {
+        "normal": "dinregular_normal_4467a9243ba6155e7f542f27030a6018"
+    },
+    "erbaum-regular": {
+        "normal": "erbaum_regular_normal_e5f7806ab0a01dc1d8fd49ed802da522"
+    },
+    "erbaum-book": {
+        "normal": "erbaum_book_normal_b8036805b7a77ecc36b699ed5c82f94d",
+        "300": "erbaum_book_300_b8036805b7a77ecc36b699ed5c82f94d"
+    },
+    "urwdin-light": {
+        "200": "urwdin_light_200_371ff1ce449435a7b7e967e8eb5832cc",
+        "normal": "urwdin_light_normal_371ff1ce449435a7b7e967e8eb5832cc"
+    },
+    "erbaum-light": {
+        "300": "erbaum_light_300_4c9ca6939a23dbc94889354884b3361e",
+        "normal": "erbaum_light_normal_4c9ca6939a23dbc94889354884b3361e"
+    }
+}

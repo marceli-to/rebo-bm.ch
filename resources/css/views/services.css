@@ -1,0 +1,7 @@
+.services {
+  @apply text-xs md:text-base
+}
+
+.services h3 {
+  @apply font-capitalized text-base md:text-md text-primary uppercase mb-3
+}

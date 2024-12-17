@@ -1,0 +1,38 @@
+<div class="bg-primary py-16 overflow-hidden">
+
+  <section class="px-6 lg:px-0 max-w-6xl mx-auto ">
+
+    <article class="bg-white shadow-4xl py-8 lg:py-12 lg:pt-16 px-4 md:px-6 lg:px-8 rounded-tr-3xl rounded-bl-3xl md:rounded-tr-4xl md:rounded-bl-4xl relative teaser" data-reveal="slide-up">
+
+      <div class="sm:grid sm:gap-4 md:gap-6 sm:grid-cols-12 px-2 sm:px-0 block relative z-20">
+
+        {{ collection:references as="references"  }}
+          
+          {{ references :shuffle="1" limit="3" }}
+            <div class="mb-6 sm:mb-0 last-of-type:!mb-0 sm:col-span-4">
+              <a href="{{ url }}" class="block no-underline hover:underline group">
+                                    
+                <figure class="mb-2 md:mb-3">
+                  <img src="{{ glide :src="preview_image:url" width="900" height="500" }}" class="w-full aspect-[16/9] object-cover group-hover:opacity-90" width="900" height="500" alt="{{ preview_image:alt }}" title="{{ preview_image:alt }}">
+                </figure>
+
+                <h3>{{ preview_title }}</h3>
+
+                {{ if in_realisation }}
+                  IN REALISATION
+                {{ else }}
+                  {{ year }}  
+                {{ /if }}
+              </a>
+            </div>
+          {{ /references }}
+
+        {{ /collection:references }}
+    
+      </div>
+
+    </article>
+
+  </section>
+
+</div>

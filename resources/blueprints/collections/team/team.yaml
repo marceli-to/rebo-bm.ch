@@ -1,0 +1,109 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          input_type: text
+          antlers: false
+          display: Title
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
+      -
+        handle: team_member_name
+        field:
+          antlers: false
+          display: Name
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
+      -
+        handle: team_member_function
+        field:
+          antlers: false
+          display: Function
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+      -
+        handle: team_member_description
+        field:
+          collapse: false
+          always_show_set_button: false
+          previews: true
+          buttons:
+            - h3
+            - bold
+            - removeformat
+            - anchor
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: true
+          link_noreferrer: true
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          remove_empty_nodes: true
+          display: Description
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+          validate:
+            - required
+      -
+        handle: team_member_image
+        field:
+          mode: list
+          container: assets
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Image
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          always_save: false
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: parent
+        field:
+          type: entries
+          collections:
+            - team
+          max_items: 1
+          listable: false
+          localizable: true
+title: Team

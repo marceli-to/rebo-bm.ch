@@ -1,0 +1,52 @@
+title: Text/Media
+fields:
+  -
+    handle: textmedia_text
+    field:
+      collapse: false
+      always_show_set_button: false
+      previews: true
+      buttons:
+        - h2
+        - h3
+        - bold
+        - unorderedlist
+        - removeformat
+        - anchor
+      save_html: false
+      toolbar_mode: fixed
+      link_noopener: false
+      link_noreferrer: false
+      target_blank: false
+      reading_time: false
+      fullscreen: true
+      allow_source: true
+      enable_input_rules: true
+      enable_paste_rules: true
+      antlers: false
+      remove_empty_nodes: false
+      display: Text
+      type: bard
+      icon: bard
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      validate:
+        - required
+  -
+    handle: textmedia_image
+    field:
+      mode: list
+      container: assets
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      max_files: 1
+      display: Image
+      type: assets
+      icon: assets
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false

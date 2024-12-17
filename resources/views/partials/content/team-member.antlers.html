@@ -1,0 +1,10 @@
+<div class="sm:col-span-6 md:col-span-4 team-member">
+  {{ if image }} 
+    <figure class="mb-4 md:mb-6">
+      <img src="{{ glide :src="image:url" width="900" height="900" }}" class="w-full aspect-square object-cover" width="900" height="900" alt="{{ image:alt }}" title="{{ image:alt }}">
+    </figure>
+  {{ /if }}
+  <h2>{{ name | nl2br }}</h2>
+  <p class="font-capitalized uppercase mb-3 md:mb-4">{{ function | nl2br }}</p>
+  {{ description }}
+</div>

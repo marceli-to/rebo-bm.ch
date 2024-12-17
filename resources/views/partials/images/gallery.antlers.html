@@ -1,0 +1,9 @@
+{{ partial:layout/inner-block }}
+  <div class="sm:gap-6 md:gap-8 sm:grid sm:grid-cols-12 mb-8 md:mb-10">
+    {{ images }}
+      <figure class="sm:col-span-6 block mb-6 md:mb-0 shadow-4xl">
+        <img src="{{ glide :src="url" width="1600" height="900" }}" class="block w-full aspect-[16/10] object-cover" width="1600" height="900" alt="{{ caption }}">
+      </figure>
+    {{ /images }}
+  </div>
+{{ /partial:layout/inner-block }}

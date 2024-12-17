@@ -1,0 +1,12 @@
+{{ partial:layout/inner-block }}
+  <article class="mb-8 md:mb-10 sm:grid sm:grid-cols-12 sm:gap-6 md:gap-8" data-reveal="slide-up">
+    <div class="sm:col-span-8">
+      {{ text }}
+    </div>
+    <div class="sm:col-span-4">
+      <figure class="block shadow-4xl">
+        <img src="{{ glide :src="image:url" width="900" height="450" }}" class="block w-full aspect-[16/10] object-cover" width="1600" height="900" alt="{{ image:caption }}">
+      </figure>
+    </div>
+  </article>
+{{ /partial:layout/inner-block }}
