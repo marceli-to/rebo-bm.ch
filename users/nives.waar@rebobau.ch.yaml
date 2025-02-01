@@ -1,9 +1,0 @@
-name: 'Nives Waar'
-roles:
-  - editor
-id: 80f40762-f76d-4189-9fc1-f66f2dddb65e
-password_hash: $2y$10$G7j6dSwHjJdSBKSwMessI.ayfDI4Gv02CcrZuc3VWUAkUT1qgGuua
-preferences:
-  collections:
-    references:
-      after_save: continue_editing
